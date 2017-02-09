@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="styles/basic.css"/>
+</head>
+<body>
+<div id="content">
+    <div id="left">
+        <h1>操作菜单</h1>
+        <div class="ft" style="border:none;">
+            <div id="menu">
+                <a href="index.html">用户信息管理</a>
+                <a href="plan.html">学习计划管理</a>
+                <a href="course.html">课程管理</a>
+                <a href="bulletin.html">公告管理</a>
+                <a href="#">退出系统</a>
+            </div>
+        </div>
+    </div>
+    <div id="right">
+        <h1>用户信息管理</h1>
+        <div id="hmenu">
+            <ul>
+                <li><a href="#">退出系统</a></li>
+                <li>管理员：xx</li>
+            </ul>
+        </div>
+        <div id="find">
+            <form>
+                <table>
+                    <tr>
+                        <td><input type="text" name="search" id="search"/></td>
+                        <td><input type="submit" value="查询" class="button"/></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="operation">用户信息管理：
+        </div>
+        <div>
+            <table class="dt" border="0" cellspacing="1">
+                <tr>
+                    <th>序号</th>
+                    <th>用户名</th>
+                    <th>密码</th>
+                    <th>电话</th>
+                    <th>邮箱</th>
+                    <th>角色</th>
+                    <th>修改</th>
+                    <th>删除用户</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>123456</td>
+                    <td>888888</td>
+                    <td>.com</td>
+                    <td>管理员</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>李四</td>
+                    <td>123456</td>
+                    <td>888888</td>
+                    <td>.com</td>
+                    <td>管理员</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>王五</td>
+                    <td>123456</td>
+                    <td>888888</td>
+                    <td>.com</td>
+                    <td>管理员</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>赵六</td>
+                    <td>123456</td>
+                    <td>888888</td>
+                    <td>.com</td>
+                    <td>老师</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>张三</td>
+                    <td>123456</td>
+                    <td>888888</td>
+                    <td>.com</td>
+                    <td>老师</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>李四</td>
+                    <td>123456</td>
+                    <td>888888</td>
+                    <td>.com</td>
+                    <td>老师</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>王五</td>
+                    <td>123456</td>
+                    <td>888888</td>
+                    <td>.com</td>
+                    <td>学生</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>赵六</td>
+                    <td>123456</td>
+                    <td>888888</td>
+                    <td>.com</td>
+                    <td>学生</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>张三</td>
+                    <td>123456</td>
+                    <td>888888</td>
+                    <td>.com</td>
+                    <td>学生</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>李四</td>
+                    <td>123456</td>
+                    <td>888888</td>
+                    <td>.com</td>
+                    <td>学生</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+            </table>
+            <div class="pagenav">
+                <ul contenteditable="true">
+                    <li class="pageLeft">
+                        <a href="#">上一页</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li class="pageRight">
+                        <a href="#">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="operation">添加新的用户：
+        </div>
+        <div class="ft">
+            <form method="post" action="${webroot}/sadmin/manage.do?action=add">
+                <table>
+                    <tr>
+                        <td class="lable">用户名</td>
+                        <td><input type="text" name="username" id="username"/></td>
+                        <td class="hint">*用户名为英文字母、下划线或数字组合,长度为6-20位</td>
+                    </tr>
+                    <tr>
+                        <td class="lable">初始密码</td>
+                        <td><input type="text" name="password" id="password"/></td>
+                        <td class="hint">*初始密码为英文字母、下划线或数字组合，长度为6-20位</td>
+                    </tr>
+                    <tr>
+                        <td class="lable">电话</td>
+                        <td><input type="text" name="phone" id="phone"/></td>
+                    </tr>
+                    <tr>
+                        <td class="lable">邮箱</td>
+                        <td><input type="text" name="email" id="email"/></td>
+                    </tr>
+                    <tr>
+                        <td class="lable">角色</td>
+                        <td><select name="rolename" class="box">
+                            <option value="manager">管理员</option>
+                            <option value="teacher">老师</option>
+                            <option value="student">学生</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="submit" value="确认添加" class="button"/>
+                            <input type="reset"  value="重置" class="button" id="reset"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div class="clearf"></div>
+</div>
+</body>
+</html>

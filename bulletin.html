@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bulletin</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="styles/basic.css"/>
+</head>
+<body>
+<div id="content">
+    <div id="left">
+        <h1>操作菜单</h1>
+        <div class="ft" style="border:none;">
+            <div id="menu">
+                <a href="index.html">用户信息管理</a>
+                <a href="plan.html">学习计划管理</a>
+                <a href="course.html">课程管理</a>
+                <a href="bulletin.html">公告管理</a>
+                <a href="#">退出系统</a>
+            </div>
+        </div>
+    </div>
+    <div id="right">
+        <h1>公告管理</h1>
+        <div id="hmenu">
+            <ul>
+                <li><a href="#">退出系统</a></li>
+                <li>管理员：xx</li>
+            </ul>
+        </div>
+        <div id="find">
+            <form>
+                <table>
+                    <tr>
+                        <td><input type="text" name="search" id="search"/></td>
+                        <td><input type="submit" value="查询" class="button"/></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="operation">公告管理：
+        </div>
+        <div>
+            <table class="dt" border="0" cellspacing="1">
+                <tr>
+                    <th>序号</th>
+                    <th>公告标题</th>
+                    <th>查看内容</th>
+                    <th>公告时间</th>
+                    <th>修改</th>
+                    <th>删除用户</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>公告一</td>
+                    <td>2017-1-11</td>
+                    <td>查看</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>公告二</td>
+                    <td>2017-1-11</td>
+                    <td>查看</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>公告三</td>
+                    <td>2017-1-11</td>
+                    <td>查看</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>公告三</td>
+                    <td>2017-1-11</td>
+                    <td>查看</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>公告五</td>
+                    <td>2017-1-11</td>
+                    <td>查看</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>公告六</td>
+                    <td>2017-1-11</td>
+                    <td>查看</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>公告七</td>
+                    <td>2017-1-11</td>
+                    <td>查看</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>公告八</td>
+                    <td>2017-1-11</td>
+                    <td>查看</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>公告九</td>
+                    <td>2017-1-11</td>
+                    <td>查看</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>公告十</td>
+                    <td>2017-1-11</td>
+                    <td>查看</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+            </table>
+            <div class="pagenav">
+                <ul contenteditable="true">
+                    <li class="pageLeft">
+                        <a href="#">上一页</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li class="pageRight">
+                        <a href="#">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="operation">添加新的公告：
+        </div>
+        <div class="ft">
+            <form method="post" action="${webroot}/sadmin/manage.do?action=add">
+                <table>
+                    <tr>
+                        <td class="lable">公告标题</td>
+                        <td><input type="text" name="title" id="title"/></td>
+                    </tr>
+                    <tr>
+                        <td class="lable">公告内容</td>
+                        <td><textarea name="message" rows="4" cols="30"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="submit" value="确认添加" class="button"/>
+                            <input type="reset"  value="重置" class="button" id="reset"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div class="clearf"></div>
+</div>
+</body>
+</html>
+</body>
+</html>

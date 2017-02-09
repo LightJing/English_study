@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>course</title>
+    <link rel="stylesheet" type="text/css" href="styles/basic.css"/>
+</head>
+<body>
+<div id="content">
+            <div id="left">
+                <h1>操作菜单</h1>
+                <div class="ft" style="border:none;">
+            <div id="menu">
+                <a href="index.html">用户信息管理</a>
+                <a href="plan.html">学习计划管理</a>
+                <a href="course.html">课程管理</a>
+                <a href="bulletin.html">公告管理</a>
+                <a href="#">退出系统</a>
+            </div>
+        </div>
+    </div>
+    <div id="right">
+        <h1>课程管理</h1>
+        <div id="hmenu">
+            <ul>
+                <li><a href="#">退出系统</a></li>
+                <li>管理员：xx</li>
+            </ul>
+        </div>
+        <div id="find">
+            <form>
+                <table>
+                    <tr>
+                        <td><input type="text" name="search" id="search"/></td>
+                        <td><input type="submit" value="查询" class="button"/></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="operation">课程管理：
+        </div>
+        <div>
+            <table class="dt" border="0" cellspacing="1">
+                <tr>
+                    <th>序号</th>
+                    <th>课程名字</th>
+                    <th>课程类别</th>
+                    <th>课程等级</th>
+                    <th>课程时长</th>
+                    <th>课程老师</th>
+                    <th>修改</th>
+                    <th>删除</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>10天突破阅读</td>
+                    <td>阅读</td>
+                    <td>GRE</td>
+                    <td>120分钟</td>
+                    <td>陶健</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>10天突破阅读</td>
+                    <td>阅读</td>
+                    <td>GRE</td>
+                    <td>120分钟</td>
+                    <td>陶健</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>10天突破阅读</td>
+                    <td>阅读</td>
+                    <td>GRE</td>
+                    <td>120分钟</td>
+                    <td>陶健</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>10天突破阅读</td>
+                    <td>阅读</td>
+                    <td>GRE</td>
+                    <td>120分钟</td>
+                    <td>陶健</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>10天突破阅读</td>
+                    <td>阅读</td>
+                    <td>GRE</td>
+                    <td>120分钟</td>
+                    <td>陶健</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>10天突破阅读</td>
+                    <td>阅读</td>
+                    <td>GRE</td>
+                    <td>120分钟</td>
+                    <td>陶健</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>10天突破阅读</td>
+                    <td>阅读</td>
+                    <td>GRE</td>
+                    <td>120分钟</td>
+                    <td>陶健</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>10天突破阅读</td>
+                    <td>阅读</td>
+                    <td>GRE</td>
+                    <td>120分钟</td>
+                    <td>陶健</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>10天突破阅读</td>
+                    <td>阅读</td>
+                    <td>GRE</td>
+                    <td>120分钟</td>
+                    <td>陶健</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>10天突破阅读</td>
+                    <td>阅读</td>
+                    <td>GRE</td>
+                    <td>120分钟</td>
+                    <td>陶健</td>
+                    <td>修改</td>
+                    <td>删除</td>
+                </tr>
+            </table>
+            <div class="pagenav">
+                <ul contenteditable="true">
+                    <li class="pageLeft">
+                        <a href="#">上一页</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li class="pageRight">
+                        <a href="#">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="operation">添加新的课程：
+        </div>
+        <div class="ft">
+            <form method="post" action="${webroot}/sadmin/manage.do?action=add">
+                <table>
+                    <tr>
+                        <td class="lable">课程等级</td>
+                        <td><select name="rank" class="box">
+                            <option value="CET4">CET4</option>
+                            <option value="CET6">CET6</option>
+                            <option value="GRE">GRE</option>
+                            <option value="IELTS">雅思</option>
+                            <option value="TOEFL">托福</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lable">课程类别</td>
+                        <td><select name="category" class="box">
+                            <option value="speak">口语</option>
+                            <option value="listen">听力</option>
+                            <option value="read">阅读</option>
+                            <option value="article">作文</option>
+                            <option value="else">其他</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lable">课程名</td>
+                        <td><input type="text" name="class" id="class"/></td>
+                    </tr>
+                    <tr>
+                        <td class="lable">课程老师</td>
+                        <td><input type="text" name="classTeacher" id="classTeacher"/></td>
+                    </tr>
+                    <tr>
+                        <td class="lable">上传课程</td>
+                        <td><input type="file" name="video" id="video"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="submit" value="确认添加" class="button"/>
+                            <input type="reset"  value="重置" class="button" id="reset"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div class="clearf"></div>
+</div>
+</body>
+</html>
