@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>index</title>
     <link rel="stylesheet" type="text/css" href="styles/basic.css"/>
+    <script type="application/javascript" src="scripts/jquery-3.1.1.js"></script>
 </head>
 <body>
 <div id="content">
@@ -13,7 +14,11 @@
             <div id="menu">
                 <a href="index.html">用户信息管理</a>
                 <a href="plan.html">学习计划管理</a>
-                <a href="course.html">课程管理</a>
+                <a href="#">课程管理</a>
+                <div id="mini">
+                    <a href="course.html">课程查询</a>
+                    <a href="courseAdd.html">课程添加</a>
+                </div>
                 <a href="bulletin.html">公告管理</a>
                 <a href="#">退出系统</a>
             </div>
@@ -210,5 +215,16 @@
     </div>
     <div class="clearf"></div>
 </div>
+<script>
+    var $course = $("#menu a:eq(2)");
+    $course.next().hide();
+    $course.click(function () {
+        if($course.next().is(":hidden")){
+            $course.next().show();
+        }else{
+            $course.next().hide();
+        }
+    });
+</script>
 </body>
 </html>

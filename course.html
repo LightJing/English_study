@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <title>course</title>
     <link rel="stylesheet" type="text/css" href="styles/basic.css"/>
+    <script type="application/javascript" src="scripts/jquery-3.1.1.js"></script>
 </head>
 <body>
 <div id="content">
-            <div id="left">
-                <h1>操作菜单</h1>
-                <div class="ft" style="border:none;">
+    <div id="left">
+        <h1>操作菜单</h1>
+        <div class="ft" style="border:none;">
             <div id="menu">
                 <a href="index.html">用户信息管理</a>
                 <a href="plan.html">学习计划管理</a>
-                <a href="course.html">课程管理</a>
+                <a id="course">课程管理</a>
+                <div id="mini">
+                    <a href="course.html">课程查询</a>
+                    <a href="courseAdd.html">课程添加</a>
+                </div>
                 <a href="bulletin.html">公告管理</a>
                 <a href="#">退出系统</a>
             </div>
@@ -166,57 +171,20 @@
                 </ul>
             </div>
         </div>
-
-        <div class="operation">添加新的课程：
-        </div>
-        <div class="ft">
-            <form method="post" action="${webroot}/sadmin/manage.do?action=add">
-                <table>
-                    <tr>
-                        <td class="lable">课程等级</td>
-                        <td><select name="rank" class="box">
-                            <option value="CET4">CET4</option>
-                            <option value="CET6">CET6</option>
-                            <option value="GRE">GRE</option>
-                            <option value="IELTS">雅思</option>
-                            <option value="TOEFL">托福</option>
-                        </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="lable">课程类别</td>
-                        <td><select name="category" class="box">
-                            <option value="speak">口语</option>
-                            <option value="listen">听力</option>
-                            <option value="read">阅读</option>
-                            <option value="article">作文</option>
-                            <option value="else">其他</option>
-                        </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="lable">课程名</td>
-                        <td><input type="text" name="class" id="class"/></td>
-                    </tr>
-                    <tr>
-                        <td class="lable">课程老师</td>
-                        <td><input type="text" name="classTeacher" id="classTeacher"/></td>
-                    </tr>
-                    <tr>
-                        <td class="lable">上传课程</td>
-                        <td><input type="file" name="video" id="video"/></td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <input type="submit" value="确认添加" class="button"/>
-                            <input type="reset"  value="重置" class="button" id="reset"/>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
     </div>
     <div class="clearf"></div>
 </div>
+<script type="application/javascript">
+    document.write("<script src='jquery-3.1.1.js'><\/script>");
+    var $course = $("#menu a:eq(2)");
+    $course.next().hide();
+    $course.click(function () {
+        if($course.next().is(":hidden")){
+            $course.next().show();
+        }else{
+            $course.next().hide();
+        }
+    });
+</script>
 </body>
 </html>

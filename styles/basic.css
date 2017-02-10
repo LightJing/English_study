@@ -70,7 +70,10 @@ h1{
     color:#20b2aa;
     border:1px solid #FFD47F;
 }
-
+#mini a{
+    font-size: 12px;
+    color: #0e90d2;
+}
 /*右侧跨界菜单样式*/
 #manager{
     float:right;
